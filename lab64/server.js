@@ -17,7 +17,7 @@ app.get('/about', (req, res) => {
 });
 // Mensagem de erro
 app.use((req, res) => {
-    res.end("404");
+    res.end("Erro 404. Pagina nao encontrada");
   });
   
 // Inicia o servidor
