@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
-
+// Mensagem de erro
+app.use((req,res)=>{res.status(404).send("Erro 404, P[agina n'ao encontrada")})
 // Configura o Express para servir arquivos estáticos da pasta "public"
 app.use(express.static(path.join(__dirname, 'public')));
-
 // Rota para a página inicial
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
